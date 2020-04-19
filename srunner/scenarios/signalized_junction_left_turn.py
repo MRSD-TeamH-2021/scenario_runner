@@ -38,7 +38,7 @@ class SignalizedJunctionLeftTurn(BasicScenario):
     """
     category = "SignalizedJunctionLeftTurn"
 
-    timeout = 80  # Timeout of scenario in seconds
+    timeout = 8000  # Timeout of scenario in seconds
 
     def __init__(self, world, ego_vehicles, config, randomize=False, debug_mode=False, criteria_enable=True,
                  timeout=80):
@@ -111,6 +111,8 @@ class SignalizedJunctionLeftTurn(BasicScenario):
             target_waypoint = wp_choice[0]
             plan.append((target_waypoint, RoadOption.LANEFOLLOW))
             wp_choice = target_waypoint.next(1.0)
+
+        print(target_waypoint)
         # adding flow of actors
         actor_source = ActorSource(
             self._world, ['vehicle.tesla.model3', 'vehicle.audi.tt'],

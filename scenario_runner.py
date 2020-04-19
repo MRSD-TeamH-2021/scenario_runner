@@ -23,6 +23,7 @@ import importlib
 import inspect
 
 import carla
+from carla import WeatherParameters
 
 from srunner.scenariomanager.carla_data_provider import *
 from srunner.scenariomanager.scenario_manager import ScenarioManager
@@ -293,6 +294,9 @@ class ScenarioRunner(object):
                 if not self.load_world(args, config.town):
                     self.cleanup()
                     continue
+                
+                # Set weather
+                self.world.set_weather(WeatherParameters.ClearNoon)
 
                 # Create scenario manager
                 self.manager = ScenarioManager(self.world, args.debug)

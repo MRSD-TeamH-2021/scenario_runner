@@ -6,6 +6,8 @@
     </scenario>
     <scenario name="OppositeVehicleRunningRedLight021" type="OppositeVehicleRunningRedLight" town="Town02">
         <ego_vehicle x="-3" y="250" z="1" yaw="270" model="vehicle.lincoln.mkz2017" />
+        <!-- <ego_vehicle x="-3" y="150" z="1" yaw="270" model="vehicle.lincoln.mkz2017" /> -->
+        <target x="-3" y="136.0" z="1" yaw="270" model="vehicle.lincoln.mkz2017" />
         <other_actor x="8.5" y="188" z="0.3" yaw="180" model="vehicle.tesla.model3" />
     </scenario>
     <scenario name="OppositeVehicleRunningRedLight031" type="OppositeVehicleRunningRedLight" town="Town03">

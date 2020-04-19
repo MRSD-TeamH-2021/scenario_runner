@@ -44,10 +44,10 @@ class OppositeVehicleRunningRedLight(BasicScenario):
     category = "RunningRedLight"
 
     # ego vehicle parameters
-    _ego_max_velocity_allowed = 20       # Maximum allowed velocity [m/s]
+    _ego_max_velocity_allowed = 5       # Maximum allowed velocity [m/s]
     _ego_avg_velocity_expected = 4       # Average expected velocity [m/s]
     _ego_expected_driven_distance = 70   # Expected driven distance [m]
-    _ego_distance_to_traffic_light = 32  # Trigger distance to traffic light [m]
+    _ego_distance_to_traffic_light = 10  # Trigger distance to traffic light [m]
     _ego_distance_to_drive = 40          # Allowed distance to drive
 
     # other vehicle
